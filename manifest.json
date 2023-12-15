@@ -1,0 +1,32 @@
+{
+    "name": "ITS Life Quality",
+    "version": "1.0.0",
+    "description": "This Is An Exestion To Improve Your Quality Of Life In ITS... VIVAT",
+    "manifest_version": 3,
+    "author": "FahrulID",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "ITS Life Quality"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://akademik.its.ac.id/ipd_kuesionermk.php",
+                "https://akademik.its.ac.id/ipd_kuesionerdosen.php"
+            ],
+            "js": [
+                "inject.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "ipd.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
